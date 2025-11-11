@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; 
+    background: linear-gradient(45deg, rgb(177, 142, 177),rgb(255, 182, 194),rgb(219, 196, 153));
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
+    background-attachment: fixed; 
+  }
+   
+
+.menu{
+    position: fixed;
+    top: 20px; left: 20px;
+    display: flex; 
+    align-items: flex-start; 
+    z-index: 200;
+}
+
+.menu-icon {
+    font-size: 2px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(148, 55, 148);
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu-icon:hover {
+    background-color: rgb(150, 90, 150);
+}
+
+.menu-lateral{
+    position: fixed;
+    top: 0; left: 0; width: 0; height: 100vh;
+    background-color: rgb(148, 55, 148);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 30px;
+    transition: width 0.3s ease;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.3);
+    z-index: 200;
+}
+
+.menu-lateral a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.menu-lateral a:hover {
+    background-color: rgb(148, 87, 148);
+}
+
+.menu:hover .menu-lateral {
+    width: 250px;
+}
+
+/* Ícone do usuário no canto superior direito */
+.icon-user {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.icon-user img {
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* container geral */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 40px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* botão de filtrar no topo */
+.topo-botao {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.filtrar-btn {
+  background-color: #b87c4f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 50px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.filtrar-btn:hover {
+  background-color: #a36c43;
+  transform: scale(1.05);
+}
+
+/* linha de formulários */
+.form-linha {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* caixas de formulário */
+.form-box {
+  background-color: #f4e3d7;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* labels */
+.form-box label {
+  font-size: 16px;
+  color: #4b2e17;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* inputs e selects */
+.form-box input,
+.form-box select {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  width: 100%;
+  transition: 0.3s;
+  
+}
+
+.form-box input:focus,
+.form-box select:focus {
+  border-color: #b87c4f;
+  outline: none;
+  box-shadow: 0 0 5px rgba(184, 124, 79, 0.5);
+}
+
+/* responsividade */
+@media (max-width: 700px) {
+  .form-linha {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-box {
+    width: 80%;
+  }
+
+
+
+  .filtrar-btn {
+    width: 150px;
+    height: 50px;
+    align-self: center;
+  }
+  
+  .icon-user {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .icon-user img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+@media (max-width: 768px) {
+    .form-linha {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+

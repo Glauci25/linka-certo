@@ -1,0 +1,299 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E5D4C9;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ===== MENU LATERAL ===== */
+.menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: flex-start;
+    z-index: 200;
+}
+
+.menu-icon {
+    font-size: 2px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(148, 55, 148);
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu-icon:hover {
+    background-color: rgb(150, 90, 150);
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    background-color: rgb(148, 55, 148);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 30px;
+    transition: width 0.3s ease;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 200;
+}
+
+.menu-lateral a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.menu-lateral a:hover {
+    background-color: rgb(148, 87, 148);
+}
+
+.menu:hover .menu-lateral {
+    width: 250px;
+}
+
+/* ===== LOGO SUPERIOR DIREITO ===== */
+.icon-user {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.icon-user img {
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== ABAS LATERAIS ===== */
+.aba-lateral {
+    position: fixed;
+    right: 0;
+    width: 50px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 0 0 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 50;
+}
+
+.aba-lateral span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.aba-noticias {
+    top: 35%;
+    background-color: #A88B8B;
+}
+
+.aba-chat {
+    top: 57%;
+    background-color: #DFA9A9;
+}
+
+.aba-lateral:hover {
+    width: 60px;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.container {
+    max-width: 950px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* ===== BOX DE DENÚNCIA ===== */
+.denuncia-box {
+    background-color: #B8A398;
+    border-radius: 30px;
+    padding: 35px 45px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.denuncia-box h1 {
+    color: white;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* ===== SEÇÃO DE FORMULÁRIO ===== */
+.form-section {
+    background-color: #9B9B9B;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+/* ===== GRUPO DE INPUT ===== */
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-label {
+    display: block;
+    background-color: #D4C4B4;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+}
+
+/* ===== CAMPO DE TEXTO ===== */
+.input-field,
+.textarea-field {
+    width: 100%;
+    background-color: #E5D4C9;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    resize: none;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.input-field:focus,
+.textarea-field:focus {
+    box-shadow: 0 0 0 3px rgba(184, 163, 152, 0.3);
+}
+
+.input-field::placeholder,
+.textarea-field::placeholder {
+    color: #666;
+}
+
+/* ===== GRUPO DE CHECKBOX ===== */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.checkbox-input {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .denuncia-box {
+        padding: 25px 30px;
+    }
+
+    .denuncia-box h1 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    .input-label {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .input-field,
+    .textarea-field {
+        font-size: 0.95rem;
+        padding: 12px 15px;
+    }
+
+    .checkbox-input {
+        width: 24px;
+        height: 24px;
+    }
+
+    .checkbox-label {
+        font-size: 0.9rem;
+    }
+
+    .aba-lateral {
+        width: 40px;
+        height: 120px;
+    }
+
+    .aba-lateral span {
+        font-size: 12px;
+    }
+
+    .icon-user {
+        top: 10px;
+        right: 10px;
+    }
+
+    .icon-user img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .denuncia-box {
+        padding: 20px;
+    }
+
+    .denuncia-box h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+
+    .checkbox-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

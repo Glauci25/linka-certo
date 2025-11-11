@@ -1,0 +1,368 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(45deg, rgb(177, 142, 177), rgb(255, 182, 194), rgb(219, 196, 153));
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ===== MENU LATERAL ===== */
+.menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: flex-start;
+  z-index: 200;
+}
+
+.menu-icon {
+  font-size: 2px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: rgb(148, 55, 148);
+  color: white;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.menu-icon:hover {
+  background-color: rgb(150, 90, 150);
+}
+
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  background-color: rgb(148, 55, 148);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-top: 30px;
+  transition: width 0.3s ease;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 200;
+}
+
+.menu-lateral a {
+  color: white;
+  text-decoration: none;
+  padding: 20px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.menu-lateral a:hover {
+  background-color: rgb(148, 87, 148);
+}
+
+.menu:hover .menu-lateral {
+  width: 250px;
+}
+
+/* ===== ÍCONE USUÁRIO ===== */
+.icon-user {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.icon-user img {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== BOTÃO SALVAR ===== */
+.btn-salvar {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 150;
+}
+
+.salvar-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background-color: #9b7b6b;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.salvar-btn:hover {
+  background-color: #8a6a5a;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.salvar-btn:active {
+  transform: translateY(-1px);
+}
+
+/* ===== CONTAINER RELATÓRIO ===== */
+.relatorio-container {
+  display: flex;
+  gap: 20px;
+  height: 85vh;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+/* ===== MINIATURAS ===== */
+.miniaturas {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+
+.miniatura {
+  background-color: #ffffff;
+  width: 80px;
+  height: 112px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-weight: bold;
+  color: #4b2e17;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.miniatura:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== FOLHA PRINCIPAL ===== */
+.folha-principal {
+  flex: 1;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(240, 240, 240, 0.5);
+}
+
+.folha {
+  width: 357px;
+  height: 505px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #4b2e17;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+/* ===== FORMULÁRIOS (caso necessário) ===== */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 40px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.topo-botao {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.filtrar-btn {
+  background-color: #b87c4f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 50px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.filtrar-btn:hover {
+  background-color: #a36c43;
+  transform: scale(1.05);
+}
+
+.form-linha {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-box {
+  background-color: #f4e3d7;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.form-box label {
+  font-size: 16px;
+  color: #4b2e17;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-box input,
+.form-box select {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.form-box input:focus,
+.form-box select:focus {
+  border-color: #b87c4f;
+  outline: none;
+  box-shadow: 0 0 5px rgba(184, 124, 79, 0.5);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1200px) {
+  .folha {
+    width: 300px;
+    height: 425px;
+  }
+}
+
+@media (max-width: 800px) {
+  .relatorio-container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .miniaturas {
+    flex-direction: row;
+    width: 90%;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 15px;
+  }
+
+  .miniatura {
+    width: 60px;
+    height: 90px;
+  }
+
+  .folha {
+    width: 90%;
+    height: auto;
+    min-height: 400px;
+  }
+
+  .btn-salvar {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .salvar-btn {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 700px) {
+  .form-linha {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-box {
+    width: 80%;
+  }
+
+  .btn-container {
+    margin-top: 10px;
+  }
+
+  .filtrar-btn {
+    width: 150px;
+    height: 50px;
+  }
+
+  .icon-user {
+    top: 10px;
+    right: 10px;
+  }
+
+  .icon-user img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .salvar-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .salvar-btn svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+

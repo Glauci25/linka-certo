@@ -1,0 +1,310 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E5D4C9;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ===== MENU LATERAL ===== */
+.menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: flex-start;
+    z-index: 200;
+}
+
+.menu-icon {
+    font-size: 2px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(148, 55, 148);
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu-icon:hover {
+    background-color: rgb(150, 90, 150);
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    background-color: rgb(148, 55, 148);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 30px;
+    transition: width 0.3s ease;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 200;
+}
+
+.menu-lateral a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.menu-lateral a:hover {
+    background-color: rgb(148, 87, 148);
+}
+
+.menu:hover .menu-lateral {
+    width: 250px;
+}
+
+/* ===== LOGO SUPERIOR DIREITO ===== */
+.icon-user {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.icon-user img {
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== ABAS LATERAIS ===== */
+.aba-lateral {
+    position: fixed;
+    right: 0;
+    width: 50px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 0 0 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 50;
+}
+
+.aba-lateral span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.aba-noticias {
+    top: 35%;
+    background-color: #A88B8B;
+}
+
+.aba-chat {
+    top: 57%;
+    background-color: #DFA9A9;
+}
+
+.aba-lateral:hover {
+    width: 60px;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* ===== BARRA DE PROGRESSO ===== */
+.progress-container {
+    background-color: #B8A398;
+    border-radius: 25px;
+    padding: 25px 40px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.progress-bar {
+    background-color: #F5F5F5;
+    border-radius: 50px;
+    padding: 15px 20px;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.progress-step {
+    flex: 1;
+    height: 60px;
+    background-color: #DFA9A9;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.progress-step.completed {
+    background-color: #E89B9B;
+}
+
+/* ===== GRID DE MÓDULOS ===== */
+.modulos-grid {
+    background-color: #B8A398;
+    border-radius: 25px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== CARD DO MÓDULO ===== */
+.modulo-card {
+    background-color: #DFA9A9;
+    border-radius: 20px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.modulo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modulo-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.modulo-image {
+    width: 100%;
+    height: 120px;
+    background-color: #B8A398;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modulo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.modulo-rating {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.star {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.star.filled {
+    color: #333;
+}
+
+.modulo-info {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
+    .modulos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .progress-bar {
+        gap: 8px;
+        padding: 12px 15px;
+    }
+
+    .progress-step {
+        height: 50px;
+    }
+
+    .modulos-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .modulo-card {
+        padding: 15px;
+    }
+
+    .modulo-image {
+        height: 100px;
+    }
+
+    .aba-lateral {
+        width: 40px;
+        height: 120px;
+    }
+
+    .aba-lateral span {
+        font-size: 12px;
+    }
+
+    .icon-user {
+        top: 10px;
+        right: 10px;
+    }
+
+    .icon-user img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .progress-container {
+        padding: 15px 20px;
+    }
+
+    .progress-step {
+        height: 40px;
+    }
+
+    .modulo-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .star {
+        font-size: 1.1rem;
+    }
+}
