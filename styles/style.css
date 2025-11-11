@@ -2,7 +2,7 @@ body{ display: flex;
     align-items: center; 
     justify-content: center; 
     height: 100vh; 
-    background-image: url("/asserts/linka-eng-software.png"); 
+    background-image: url("../asserts/back-image.png"); 
     background-attachment: fixed; }
 
 .quadrado {
