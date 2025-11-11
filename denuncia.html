@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canal de Denúncia</title>
+    <link rel="stylesheet" href="/styles/denuncia.css">
+</head>
+<body>
+    <!-- Menu lateral -->
+    <div class="menu">
+        <div class="menu-icon">
+            <img src="https://icon-library.com/images/white-menu-icon/white-menu-icon-12.jpg" alt="Ícone Menu" width="60px" height="60px">
+        </div>
+        <div class="menu-lateral">
+            <a href="aba-relatorio.html">Relatórios</a>
+            <a href="modulos.html">Módulos</a>
+            <a href="denuncia.html">Canal de Denúncia</a>
+            <a href="user-history.html">Canal Sua História</a>
+            <a href="mais-info.html">Mais informações</a>
+        </div>
+    </div>
+
+    <!-- Abas laterais -->
+    <div class="aba-lateral aba-noticias">
+        <span>"notícias"</span>
+    </div>
+    <div class="aba-lateral aba-chat">
+        <span>"chat"</span>
+    </div>
+
+    <!-- Logo no canto superior direito -->
+    <div class="icon-user">
+        <img src="/asserts/logo-linka.png" alt="Logo Linka" width="80px" height="80px">
+    </div>
+
+    <!-- Container principal -->
+    <div class="container">
+        <div class="denuncia-box">
+            <h1>ABA DENÚNCIA</h1>
+
+            <div class="form-section">
+                <!-- Campo de denúncia -->
+                <div class="input-group">
+                    <label class="input-label">Descreva sua denúncia:</label>
+                    <textarea 
+                        class="textarea-field" 
+                        placeholder="Escreva aqui sua denúncia..."
+                        rows="8"
+                    ></textarea>
+                </div>
+
+                <!-- Campo de e-mail -->
+                <div class="input-group">
+                    <label class="input-label">Escreva seu e-mail:</label>
+                    <input 
+                        type="email" 
+                        class="input-field" 
+                        placeholder="Escreva aqui seu e-mail..."
+                    />
+                </div>
+
+                <!-- Checkbox de confirmação -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="confirmacao" class="checkbox-input">
+                    <label for="confirmacao" class="checkbox-label">
+                        Declaro que as informações fornecidas são verdadeiras e assumo responsabilidade pelo envio
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizador de Relatório</title>
+  <link rel="stylesheet" href="/styles/gera-relatorio.css">
+</head>
+<body>
+  <div class="container"> 
+    <header>
+      <h1></h1>
+      <div class="icon-user">
+        <img src="/asserts/logo-linka.png" alt="Ícone Usuário" width="80px" height="80px">
+      </div>
+    </header>
+
+    <!-- Botão de salvar/baixar -->
+    <div class="btn-salvar">
+      <button class="salvar-btn" onclick="salvarRelatorio()">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+          <path d="M5 20h14v-2H5v2zm7-18l-7 7h4v6h6v-6h4l-7-7z" fill="white"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="menu">
+      <div class="menu-icon">
+        <img src="https://icon-library.com/images/white-menu-icon/white-menu-icon-12.jpg" alt="Ícone Menu" width="60px" height="60px">
+      </div>
+      <div class="menu-lateral">
+        <a href="aba-relatorio.html">Relatórios</a>
+        <a href="modulos.html">Módulos</a>
+        <a href="denuncia.html">Canal de Denúncia</a>
+        <a href="user-history.html">Canal Sua História</a>
+        <a href="mais-info.html">Mais informações</a>
+      </div>
+    </div>
+    
+    <div class="relatorio-container">
+      <!-- Miniaturas das páginas -->
+      <div class="miniaturas">
+        <div class="miniatura">1</div>
+        <div class="miniatura">2</div>
+        <div class="miniatura">3</div>
+        <div class="miniatura">4</div>
+        <div class="miniatura">5</div>
+      </div>
+      
+      <!-- Área principal do relatório -->
+      <div class="folha-principal">
+        <div class="folha">Página 1</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function salvarRelatorio() {
+      alert('Glauciane Barburda salvo com sucesso!');
+      // Adicione aqui a lógica para salvar/baixar o relatório
+    }
+  </script>
+</body>
+</html>

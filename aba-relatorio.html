@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios</title>
+    <link rel="stylesheet" href="/styles/aba-relatorio.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1></h1>
+            <div class="icon-user">
+                <img src="/asserts/logo-linka.png" alt="Ícone Usuário" width="80px" height="80px">
+            </div>
+        </header>
+
+        <div class="form-linha">
+            <div class="form-box">
+                <label for="data-inicio">Data Início:</label>
+                <input type="text" id="data-inicio" placeholder="DD/MM/AAAA">
+            </div>
+
+            <div class="form-box">
+                <label for="data-final">Data Final:</label>
+                <input type="text" id="data-final" placeholder="DD/MM/AAAA">
+            </div>
+
+            <div class="form-box">
+                <label for="filtro">Filtro:</label>
+                <select id="filtro">
+                    <option value="" disabled selected>opções</option>
+                    <option value="genero">Gênero</option>
+                    <option value="etnia">Etnia</option>
+                    <option value="pcd">PCD</option>
+                    <option value="faixa-etaria">Faixa Etária</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <a href="gera-relatorio.html">
+                <button class="filtrar-btn" onclick="">FILTRAR</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="menu-icon">
+            <img src="https://icon-library.com/images/white-menu-icon/white-menu-icon-12.jpg" alt="Ícone Menu" width="60px" height="60px">
+        </div>
+        <div class="menu-lateral">
+            <a href="aba-relatorio.html">Relatórios</a>     
+            <a href="modulos.html">Módulos</a>
+            <a href="denuncia.html">Canal de Denúncia</a>
+            <a href="user-history.html">Canal Sua História</a>
+            <a href="mais-info.html">Mais informações</a>
+        </div>
+    </div>
+</body>
+</html>

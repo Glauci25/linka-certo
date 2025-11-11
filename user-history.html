@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canal de Histórias</title>
+    <link rel="stylesheet" href="/styles/user-history.css">
+</head>
+<body>
+    <!-- Menu lateral -->
+    <div class="menu">
+        <div class="menu-icon">
+            <img src="https://icon-library.com/images/white-menu-icon/white-menu-icon-12.jpg" alt="Ícone Menu" width="60px" height="60px">
+        </div>
+        <div class="menu-lateral">
+            <a href="aba-relatorio.html">Relatórios</a>
+            <a href="#">Perfil do Colaborador</a>
+            <a href="modulos.html">Módulos</a>
+            <a href="denuncia.html">Canal de Denúncia</a>
+            <a href="user-history.html">Canal Sua História</a>
+            <a href="mais-info.html">Mais informações</a>
+        </div>
+    </div>
+
+    <!-- Abas laterais -->
+    <div class="aba-lateral aba-noticias">
+        <span>"notícias"</span>
+    </div>
+    <div class="aba-lateral aba-chat">
+        <span>"chat"</span>
+    </div>
+
+    <!-- Logo no canto superior direito -->
+    <div class="icon-user">
+        <img src="/asserts/logo-linka.png" alt="Logo Linka" width="80px" height="80px">
+    </div>
+
+    <!-- Container principal -->
+    <div class="container">
+        <div class="historias-box">
+            <h1>CANAL DE HISTÓRIAS</h1>
+
+            <div class="chat-container">
+                <!-- Área de mensagens -->
+                <div class="mensagens-area" id="mensagensArea">
+                </div>
+
+                <!-- Campo de entrada -->
+                <div class="input-container">
+                    <input 
+                        type="text" 
+                        class="input-mensagem" 
+                        placeholder="Escreva aqui sua história..."
+                        id="inputMensagem"
+                    />
+                    <button class="btn-enviar" onclick="enviarMensagem()">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="white"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function enviarMensagem() {
+            const input = document.getElementById('inputMensagem');
+            const mensagensArea = document.getElementById('mensagensArea');
+            
+            if (input.value.trim() !== '') {
+                const novaMensagem = document.createElement('div');
+                novaMensagem.className = 'mensagem';
+                novaMensagem.textContent = input.value;
+                mensagensArea.appendChild(novaMensagem);
+                
+                input.value = '';
+                mensagensArea.scrollTop = mensagensArea.scrollHeight;
+            }
+        }
+
+        // Enviar com Enter
+        document.getElementById('inputMensagem').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                enviarMensagem();
+            }
+        });
+    </script>
+</body>
+</html>
